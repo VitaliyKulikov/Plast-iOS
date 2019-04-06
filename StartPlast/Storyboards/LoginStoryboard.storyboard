@@ -1,32 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3Ny-5e-gSu">
-    <device id="retina6_1" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3Ny-5e-gSu">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="xOU-Ky-lOI">
             <objects>
-                <viewController id="3Ny-5e-gSu" sceneMemberID="viewController">
+                <viewController id="3Ny-5e-gSu" customClass="LoginViewController" customModule="StartPlast" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LQr-Bp-B45">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TfO-9U-sXh" userLabel="LoginButtonContainer">
+                                <rect key="frame" x="0.0" y="454.5" width="320" height="113.5"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iJS-yJ-dIO" customClass="GIDSignInButton">
+                                        <rect key="frame" x="62" y="39.5" width="196" height="40"/>
+                                        <color key="backgroundColor" red="1" green="0.82519534630000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="196" id="7On-tm-OGV"/>
+                                            <constraint firstAttribute="height" constant="40" id="ktr-oc-P56"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Зареєструйся" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lca-rb-XKZ">
+                                        <rect key="frame" x="62" y="14.5" width="94" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="lca-rb-XKZ" firstAttribute="leading" secondItem="iJS-yJ-dIO" secondAttribute="leading" id="4nZ-Hc-kXZ"/>
+                                    <constraint firstItem="iJS-yJ-dIO" firstAttribute="top" secondItem="lca-rb-XKZ" secondAttribute="bottom" constant="8" id="Aru-Fw-LXi"/>
+                                    <constraint firstItem="iJS-yJ-dIO" firstAttribute="centerY" secondItem="TfO-9U-sXh" secondAttribute="centerY" multiplier="1.05" id="okO-cm-4HJ"/>
+                                    <constraint firstItem="iJS-yJ-dIO" firstAttribute="centerX" secondItem="TfO-9U-sXh" secondAttribute="centerX" id="yLF-QU-HvS"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Rn-fG-qYn" userLabel="InfoContainer">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="454.5"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Ckq-AL-ZbR">
+                                        <rect key="frame" x="64.5" y="125" width="191" height="272.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Ckq-AL-ZbR" secondAttribute="height" multiplier="7:10" id="tfJ-dH-83S"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Plast " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3HE-GR-lXi">
+                                        <rect key="frame" x="99" y="72" width="122" height="29"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <color key="textColor" red="0.15294117647058825" green="0.15294117647058825" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Ckq-AL-ZbR" firstAttribute="centerY" secondItem="6Rn-fG-qYn" secondAttribute="centerY" multiplier="1.15" id="5lW-0E-w4y"/>
+                                    <constraint firstItem="Ckq-AL-ZbR" firstAttribute="top" secondItem="3HE-GR-lXi" secondAttribute="bottom" constant="24" id="KkP-8S-riG"/>
+                                    <constraint firstItem="3HE-GR-lXi" firstAttribute="centerX" secondItem="6Rn-fG-qYn" secondAttribute="centerX" id="Oqt-SL-8Ef"/>
+                                    <constraint firstItem="Ckq-AL-ZbR" firstAttribute="height" secondItem="6Rn-fG-qYn" secondAttribute="height" multiplier="0.6" id="qVp-sj-wdY"/>
+                                    <constraint firstItem="Ckq-AL-ZbR" firstAttribute="centerX" secondItem="6Rn-fG-qYn" secondAttribute="centerX" id="qfo-1g-oBU"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TfO-9U-sXh" firstAttribute="top" secondItem="6Rn-fG-qYn" secondAttribute="bottom" id="BNa-vM-78K"/>
+                            <constraint firstItem="Dcc-vo-bSD" firstAttribute="trailing" secondItem="TfO-9U-sXh" secondAttribute="trailing" id="Rih-FV-hUF"/>
+                            <constraint firstItem="TfO-9U-sXh" firstAttribute="height" secondItem="LQr-Bp-B45" secondAttribute="height" multiplier="0.2" id="TBr-K1-TJE"/>
+                            <constraint firstItem="6Rn-fG-qYn" firstAttribute="leading" secondItem="Dcc-vo-bSD" secondAttribute="leading" id="WCd-VC-OIg"/>
+                            <constraint firstItem="6Rn-fG-qYn" firstAttribute="top" secondItem="LQr-Bp-B45" secondAttribute="top" id="ZHt-zb-q8b"/>
+                            <constraint firstItem="TfO-9U-sXh" firstAttribute="leading" secondItem="Dcc-vo-bSD" secondAttribute="leading" id="eyl-qY-blb"/>
+                            <constraint firstItem="Dcc-vo-bSD" firstAttribute="trailing" secondItem="6Rn-fG-qYn" secondAttribute="trailing" id="tKA-3m-YNr"/>
+                            <constraint firstItem="Dcc-vo-bSD" firstAttribute="bottom" secondItem="TfO-9U-sXh" secondAttribute="bottom" id="uKh-Db-9HU"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Dcc-vo-bSD"/>
                     </view>
                     <connections>
+                        <outlet property="signInButton" destination="iJS-yJ-dIO" id="Mfc-Rz-gz9"/>
                         <segue destination="4GH-mP-HM7" kind="show" identifier="CarouselIdentifier" id="dcQ-ky-4ud"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jU9-rf-RPG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-68" y="34"/>
+            <point key="canvasLocation" x="-68" y="33.733133433283363"/>
         </scene>
         <!--CarouselStoryboard-->
         <scene sceneID="1QS-cn-in3">
@@ -37,4 +101,7 @@
             <point key="canvasLocation" x="683" y="31"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="loginIcon" width="392" height="560"/>
+    </resources>
 </document>
