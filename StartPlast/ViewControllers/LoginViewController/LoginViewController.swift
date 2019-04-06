@@ -26,14 +26,10 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { _ in
-            self.performSegue(withIdentifier: LoginViewController.kMainProgramId,
-                         sender:  ProfileModel(
-                            username: "Kristina Del Rio Albrechet",
-                            email: "kalbrechet@gmail.com",
-                            avatarUrl: URL(string: "https://cdn-images-1.medium.com/fit/c/200/200/1*8EAtAFUVRiK1btuFhLnE1Q@2x.jpeg")!,
-                            coins: 0))
+            ProfileDataService.shared.get() { [weak self] model in
+                self?.performSegue(withIdentifier: LoginViewController.kMainProgramId, sender: model)
+            }
         }
-        
     }
 }
 
