@@ -18,6 +18,8 @@
 		B7B58C422258B2DB00D56198 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7B58C402258B2DB00D56198 /* LaunchScreen.storyboard */; };
 		B7B58C4D2258B2DB00D56198 /* StartPlastTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B58C4C2258B2DB00D56198 /* StartPlastTests.swift */; };
 		B7B58C582258B2DB00D56198 /* StartPlastUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B58C572258B2DB00D56198 /* StartPlastUITests.swift */; };
+		BB1C9D8E2258DFB6009E597C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB1C9D8D2258DFB6009E597C /* GoogleService-Info.plist */; };
+		BB1C9D912258E0C4009E597C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1C9D902258E0C4009E597C /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		B7B58C572258B2DB00D56198 /* StartPlastUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPlastUITests.swift; sourceTree = "<group>"; };
 		B7B58C592258B2DB00D56198 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B95E8CB68B880C1E8797C1DA /* Pods-StartPlast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StartPlast.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StartPlast/Pods-StartPlast.debug.xcconfig"; sourceTree = "<group>"; };
+		BB1C9D8D2258DFB6009E597C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BB1C9D902258E0C4009E597C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,7 @@
 		0E2A06272258CEB400408A4A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				BB1C9D8F2258DFD2009E597C /* LoginViewController */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -196,9 +201,18 @@
 			children = (
 				B7B58C372258B2D900D56198 /* AppDelegate.swift */,
 				B7B58C3E2258B2DB00D56198 /* Assets.xcassets */,
+				BB1C9D8D2258DFB6009E597C /* GoogleService-Info.plist */,
 				B7B58C432258B2DB00D56198 /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BB1C9D8F2258DFD2009E597C /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BB1C9D902258E0C4009E597C /* LoginViewController.swift */,
+			);
+			path = LoginViewController;
 			sourceTree = "<group>";
 		};
 		DF0CE663D1BEE57108C8B862 /* Pods */ = {
@@ -222,7 +236,6 @@
 				B7B58C312258B2D900D56198 /* Frameworks */,
 				B7B58C322258B2D900D56198 /* Resources */,
 				3BCAFFFD4C479D150E343EEC /* [CP] Embed Pods Frameworks */,
-				3BF3699A357A11310E08FC63 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -323,6 +336,7 @@
 				0E2A06302258D31400408A4A /* ProfileStoryboard.storyboard in Resources */,
 				B7B58C3D2258B2D900D56198 /* Main.storyboard in Resources */,
 				0E2A062C2258D2C600408A4A /* LoginStoryboard.storyboard in Resources */,
+				BB1C9D8E2258DFB6009E597C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,45 +362,21 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-StartPlast/Pods-StartPlast-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StartPlast/Pods-StartPlast-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3BF3699A357A11310E08FC63 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-StartPlast/Pods-StartPlast-resources.sh",
-				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StartPlast/Pods-StartPlast-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		90ACD1DC023ED0817CCEFABA /* [CP] Check Pods Manifest.lock */ = {
@@ -414,6 +404,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB1C9D912258E0C4009E597C /* LoginViewController.swift in Sources */,
 				B7B58C3A2258B2D900D56198 /* ViewController.swift in Sources */,
 				B7B58C382258B2D900D56198 /* AppDelegate.swift in Sources */,
 			);

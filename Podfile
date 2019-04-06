@@ -1,9 +1,9 @@
-platform :ios, '9.0'
+platform :ios, '10.0'
+use_frameworks!
 
 target 'StartPlast' do
 
-  use_frameworks!
-
-  pod 'GoogleSignIn'
+  pod 'Firebase/Core'
+  pod 'Kingfisher', '~> 5.0'
 
 end
