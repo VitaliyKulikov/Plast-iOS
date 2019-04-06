@@ -22,25 +22,47 @@ class CarouselCell: UICollectionViewCell {
     @IBOutlet weak var cardTitleLabel: UILabel!
     @IBOutlet weak var cardDescriptionLabel: UILabel!
     @IBOutlet weak var detailsButton: UIButton!
+    @IBOutlet weak var inactiveView: UIView!
+    
+    private static let kCardCornerRadius: CGFloat = 14
     
     override func awakeFromNib() {
         super.awakeFromNib()
         cardIdButton.layer.cornerRadius = cardIdButton.bounds.width / 2
+        cardView.cornerRadius = CarouselCell.kCardCornerRadius
+        inactiveView.layer.cornerRadius = CarouselCell.kCardCornerRadius
+        detailsButton.layer.cornerRadius = detailsButton.bounds.height / 2
     }
     
     func configure(with model: CardModel) {
-        cardIdButton.setTitle("\(model.id + 1)", for: .normal)
         coinsLabel.text = "+ \(model.plastCoins) пласткоїнів"
         generalImageView.image = UIImage(named: "card-\(model.iconId)")
         cardTitleLabel.text = model.title
         cardDescriptionLabel.text = model.description
         dashLeadingConstraint.constant = model.id == 0 ? 10 : 0
-        detailsButton.layer.cornerRadius = detailsButton.bounds.height / 2
+        cardIdButton.backgroundColor = model.state == .locked ? #colorLiteral(red: 0.6980392157, green: 0.6980392157, blue: 0.6980392157, alpha: 1) : #colorLiteral(red: 0.3411764706, green: 0.7215686275, blue: 0.5803921569, alpha: 1)
+        cardIdButton.setTitle(model.state == .done ? "✔︎" : "\(model.id + 1)", for: .normal)
+        inactiveView.alpha = model.state == .locked ? 1 : 0
+        detailsButton.setTitle(model.state == .done ? "Деталі" : "Розпочати", for: .normal)
         
         switch model.state {
         case .locked: lockImageView.image = UIImage(named: "locked")
         case .unlocked: lockImageView.image = UIImage(named: "unlocked")
         default: lockImageView.image = UIImage(named: "medal")
         }
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        coinsLabel.text = "-/-"
+        generalImageView.image = nil
+        cardTitleLabel.text = "-/-"
+        cardDescriptionLabel.text = "-/-"
+        dashLeadingConstraint.constant = 0
+        cardIdButton.backgroundColor = #colorLiteral(red: 0.6980392157, green: 0.6980392157, blue: 0.6980392157, alpha: 1)
+        cardIdButton.setTitle("", for: .normal)
+        inactiveView.alpha = 1
+        detailsButton.setTitle("Розпочати", for: .normal)
+        lockImageView.image = UIImage(named: "locked")
     }
 }

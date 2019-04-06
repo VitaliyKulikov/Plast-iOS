@@ -26,10 +26,10 @@ class CarouselController: UIViewController {
     private func updateContent() {
         // FIXME: Delete hard-coded values with method from CardModelService.
         cardModels = [
-            CardModel(id: 0, stateId: 0, iconId: 0, plastCoins: 10, title: "First card", description: "This invitation was intended for kalbrechet@gmail.com. If you were not expecting this invitation, you can ignore this email. If @VitaliyKulikov is sending you too many emails, you can block them or report abuse."),
-            CardModel(id: 1, stateId: 1, iconId: 1, plastCoins: 10, title: "First card", description: "This invitation was intended for kalbrechet@gmail.com. If you were not expecting this invitation, you can ignore this email. If @VitaliyKulikov is sending you too many emails, you can block them or report abuse."),
-            CardModel(id: 2, stateId: 2, iconId: 2, plastCoins: 10, title: "First card", description: "This invitation was intended for kalbrechet@gmail.com. If you were not expecting this invitation, you can ignore this email. If @VitaliyKulikov is sending you too many emails, you can block them or report abuse."),
-            CardModel(id: 3, stateId: 2, iconId: 2, plastCoins: 10, title: "First card", description: "This invitation was intended for kalbrechet@gmail.com. If you were not expecting this invitation, you can ignore this email. If @VitaliyKulikov is sending you too many emails, you can block them or report abuse.")
+            CardModel(id: 0, stateId: 3, iconId: 0, plastCoins: 10, title: "First card", description: "This invitation was intended for kalbrechet@gmail.com. If you were not expecting this invitation, you can ignore this email. If @VitaliyKulikov is sending you too many emails, you can block them or report abuse."),
+            CardModel(id: 1, stateId: 2, iconId: 1, plastCoins: 10, title: "First card", description: "This invitation was intended for kalbrechet@gmail.com. If you were not expecting this invitation, you can ignore this email. If @VitaliyKulikov is sending you too many emails, you can block them or report abuse."),
+            CardModel(id: 2, stateId: 1, iconId: 2, plastCoins: 10, title: "First card", description: "This invitation was intended for kalbrechet@gmail.com. If you were not expecting this invitation, you can ignore this email. If @VitaliyKulikov is sending you too many emails, you can block them or report abuse."),
+            CardModel(id: 3, stateId: 1, iconId: 2, plastCoins: 10, title: "First card", description: "This invitation was intended for kalbrechet@gmail.com. If you were not expecting this invitation, you can ignore this email. If @VitaliyKulikov is sending you too many emails, you can block them or report abuse.")
         ]
         collectionView.reloadData()
     }
@@ -58,7 +58,10 @@ extension CarouselController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView,
                         didSelectItemAt indexPath: IndexPath) {
-        onDetails?(cardModels[indexPath.row])
+    
+        if cardModels[indexPath.row].state != .locked {
+            onDetails?(cardModels[indexPath.row])
+        }
     }
 }
 

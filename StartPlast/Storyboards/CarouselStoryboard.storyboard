@@ -114,7 +114,7 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kUU-gR-ya2">
                                                     <rect key="frame" x="0.0" y="11.666666666666664" width="325" height="21"/>
-                                                    <mutableString key="text">−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−</mutableString>
+                                                    <string key="text">−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.69803921568627447" green="0.69803921568627447" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -182,11 +182,18 @@
                                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </state>
                                                         </button>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e4y-3e-lE2">
+                                                            <rect key="frame" x="0.0" y="0.0" width="289" height="461"/>
+                                                            <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="0.47513204225352113" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </view>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="mDr-Wx-g7T" secondAttribute="trailing" constant="30" id="1GS-5e-GSy"/>
+                                                        <constraint firstAttribute="trailing" secondItem="e4y-3e-lE2" secondAttribute="trailing" id="27J-0u-OEt"/>
                                                         <constraint firstItem="wSX-B0-UBc" firstAttribute="top" secondItem="Pa6-nd-Vzd" secondAttribute="bottom" constant="8" id="2jv-Ec-wmG"/>
+                                                        <constraint firstItem="e4y-3e-lE2" firstAttribute="top" secondItem="LP2-h5-LQR" secondAttribute="top" id="BZN-PS-reg"/>
+                                                        <constraint firstAttribute="bottom" secondItem="e4y-3e-lE2" secondAttribute="bottom" id="CSR-fp-KwV"/>
                                                         <constraint firstAttribute="bottom" secondItem="mDr-Wx-g7T" secondAttribute="bottom" constant="15" id="Cd2-bQ-goi"/>
                                                         <constraint firstItem="wGT-ar-6fx" firstAttribute="trailing" secondItem="Dey-fg-U1Q" secondAttribute="trailing" id="I22-H8-asP"/>
                                                         <constraint firstAttribute="trailing" secondItem="Dey-fg-U1Q" secondAttribute="trailing" constant="20" id="Sfs-WC-HA2"/>
@@ -201,6 +208,7 @@
                                                         <constraint firstItem="wSX-B0-UBc" firstAttribute="height" secondItem="LP2-h5-LQR" secondAttribute="height" multiplier="0.4" id="i9R-Sk-8vq"/>
                                                         <constraint firstItem="Dey-fg-U1Q" firstAttribute="top" secondItem="wSX-B0-UBc" secondAttribute="bottom" constant="10" id="jeu-ID-Ldh"/>
                                                         <constraint firstAttribute="trailing" secondItem="SD4-o7-Hnl" secondAttribute="trailing" constant="20" id="k4Z-JN-zgO"/>
+                                                        <constraint firstItem="e4y-3e-lE2" firstAttribute="leading" secondItem="LP2-h5-LQR" secondAttribute="leading" id="kYR-gF-haA"/>
                                                         <constraint firstItem="Dey-fg-U1Q" firstAttribute="leading" secondItem="gM9-uO-fvf" secondAttribute="leading" id="mvS-28-oJY"/>
                                                         <constraint firstItem="gM9-uO-fvf" firstAttribute="leading" secondItem="LP2-h5-LQR" secondAttribute="leading" constant="20" id="ySI-Be-cSV"/>
                                                         <constraint firstItem="SD4-o7-Hnl" firstAttribute="top" secondItem="LP2-h5-LQR" secondAttribute="top" constant="14" id="yTK-Zm-7K7"/>
@@ -231,6 +239,7 @@
                                             <outlet property="dashLineLabel" destination="kUU-gR-ya2" id="3GL-HW-vXl"/>
                                             <outlet property="detailsButton" destination="mDr-Wx-g7T" id="rN2-2U-gGY"/>
                                             <outlet property="generalImageView" destination="wSX-B0-UBc" id="row-mb-PFe"/>
+                                            <outlet property="inactiveView" destination="e4y-3e-lE2" id="uXV-RW-0Gi"/>
                                             <outlet property="lockImageView" destination="SD4-o7-Hnl" id="ulg-sy-dfH"/>
                                             <outlet property="taskIdentifierLabel" destination="gM9-uO-fvf" id="QbA-ua-ZYc"/>
                                         </connections>
@@ -258,7 +267,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c7q-Lx-Bfv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="935.20000000000005" y="254.12293853073464"/>
+            <point key="canvasLocation" x="934.78260869565224" y="253.53260869565219"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="le3-Md-mUM">
