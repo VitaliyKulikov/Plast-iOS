@@ -10,6 +10,13 @@
 		0E2A062C2258D2C600408A4A /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E2A062B2258D2C600408A4A /* LoginStoryboard.storyboard */; };
 		0E2A062E2258D2F400408A4A /* CarouselStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E2A062D2258D2F400408A4A /* CarouselStoryboard.storyboard */; };
 		0E2A06302258D31400408A4A /* ProfileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E2A062F2258D31400408A4A /* ProfileStoryboard.storyboard */; };
+		0E2A06322258DD9500408A4A /* MainProgramController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2A06312258DD9500408A4A /* MainProgramController.swift */; };
+		0E2A06342258DE4E00408A4A /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2A06332258DE4E00408A4A /* ProfileModel.swift */; };
+		0E2A06362258DE6B00408A4A /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2A06352258DE6B00408A4A /* CardModel.swift */; };
+		0E2A06382258E11800408A4A /* CarouselController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2A06372258E11800408A4A /* CarouselController.swift */; };
+		0E2A063B2258EE3A00408A4A /* CarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2A063A2258EE3A00408A4A /* CarouselCell.swift */; };
+		0E2A063D2258F7EC00408A4A /* DetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2A063C2258F7EC00408A4A /* DetailsController.swift */; };
+		0E2A063F2259067F00408A4A /* RoundShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2A063E2259067F00408A4A /* RoundShadowView.swift */; };
 		844DA08FB2CBD531C63D6623 /* Pods_StartPlast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7F2138421E0E07D60FC06D /* Pods_StartPlast.framework */; };
 		B7B58C382258B2D900D56198 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B58C372258B2D900D56198 /* AppDelegate.swift */; };
 		B7B58C3A2258B2D900D56198 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B58C392258B2D900D56198 /* ViewController.swift */; };
@@ -41,6 +48,13 @@
 		0E2A062B2258D2C600408A4A /* LoginStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginStoryboard.storyboard; sourceTree = "<group>"; };
 		0E2A062D2258D2F400408A4A /* CarouselStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CarouselStoryboard.storyboard; sourceTree = "<group>"; };
 		0E2A062F2258D31400408A4A /* ProfileStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileStoryboard.storyboard; sourceTree = "<group>"; };
+		0E2A06312258DD9500408A4A /* MainProgramController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProgramController.swift; sourceTree = "<group>"; };
+		0E2A06332258DE4E00408A4A /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
+		0E2A06352258DE6B00408A4A /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
+		0E2A06372258E11800408A4A /* CarouselController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselController.swift; sourceTree = "<group>"; };
+		0E2A063A2258EE3A00408A4A /* CarouselCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCell.swift; sourceTree = "<group>"; };
+		0E2A063C2258F7EC00408A4A /* DetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsController.swift; sourceTree = "<group>"; };
+		0E2A063E2259067F00408A4A /* RoundShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundShadowView.swift; sourceTree = "<group>"; };
 		1E7F2138421E0E07D60FC06D /* Pods_StartPlast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StartPlast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52C9A0E70D0EC8E42F457055 /* Pods-StartPlast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StartPlast.release.xcconfig"; path = "Pods/Target Support Files/Pods-StartPlast/Pods-StartPlast.release.xcconfig"; sourceTree = "<group>"; };
 		5D1C919D6D92DCAED038A180 /* Pods_StartPlastUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StartPlastUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +116,10 @@
 		0E2A06272258CEB400408A4A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0E2A06312258DD9500408A4A /* MainProgramController.swift */,
+				0E2A06372258E11800408A4A /* CarouselController.swift */,
+				0E2A063A2258EE3A00408A4A /* CarouselCell.swift */,
+				0E2A063C2258F7EC00408A4A /* DetailsController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -109,6 +127,8 @@
 		0E2A06282258CEBE00408A4A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0E2A06332258DE4E00408A4A /* ProfileModel.swift */,
+				0E2A06352258DE6B00408A4A /* CardModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -123,6 +143,7 @@
 		0E2A062A2258CED800408A4A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				0E2A063E2259067F00408A4A /* RoundShadowView.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -414,8 +435,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E2A06322258DD9500408A4A /* MainProgramController.swift in Sources */,
+				0E2A06382258E11800408A4A /* CarouselController.swift in Sources */,
 				B7B58C3A2258B2D900D56198 /* ViewController.swift in Sources */,
 				B7B58C382258B2D900D56198 /* AppDelegate.swift in Sources */,
+				0E2A063D2258F7EC00408A4A /* DetailsController.swift in Sources */,
+				0E2A063F2259067F00408A4A /* RoundShadowView.swift in Sources */,
+				0E2A063B2258EE3A00408A4A /* CarouselCell.swift in Sources */,
+				0E2A06342258DE4E00408A4A /* ProfileModel.swift in Sources */,
+				0E2A06362258DE6B00408A4A /* CardModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
