@@ -81,6 +81,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E2A06262258CE0B00408A4A /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B7B58C402258B2DB00D56198 /* LaunchScreen.storyboard */,
+				B7B58C3B2258B2D900D56198 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		0E2A06272258CEB400408A4A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		0E2A06282258CEBE00408A4A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0E2A06292258CEC600408A4A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		0E2A062A2258CED800408A4A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		15A5BFE38BB5873B80151685 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +153,11 @@
 		B7B58C362258B2D900D56198 /* StartPlast */ = {
 			isa = PBXGroup;
 			children = (
+				0E2A062A2258CED800408A4A /* Common */,
+				0E2A06292258CEC600408A4A /* Services */,
+				0E2A06282258CEBE00408A4A /* Models */,
+				0E2A06272258CEB400408A4A /* ViewControllers */,
+				0E2A06262258CE0B00408A4A /* Storyboards */,
 				B7B58C652258C22200D56198 /* Supporting Files */,
 				B7B58C392258B2D900D56198 /* ViewController.swift */,
 			);
@@ -144,9 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				B7B58C372258B2D900D56198 /* AppDelegate.swift */,
-				B7B58C3B2258B2D900D56198 /* Main.storyboard */,
 				B7B58C3E2258B2DB00D56198 /* Assets.xcassets */,
-				B7B58C402258B2DB00D56198 /* LaunchScreen.storyboard */,
 				B7B58C432258B2DB00D56198 /* Info.plist */,
 			);
 			path = "Supporting Files";
