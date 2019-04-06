@@ -10,6 +10,13 @@
 		0E2A062C2258D2C600408A4A /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E2A062B2258D2C600408A4A /* LoginStoryboard.storyboard */; };
 		0E2A062E2258D2F400408A4A /* CarouselStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E2A062D2258D2F400408A4A /* CarouselStoryboard.storyboard */; };
 		0E2A06302258D31400408A4A /* ProfileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E2A062F2258D31400408A4A /* ProfileStoryboard.storyboard */; };
+		0E2A064122590AD900408A4A /* RoundShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2A064022590AD900408A4A /* RoundShadowView.swift */; };
+		0E2A064422590AE200408A4A /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2A064222590AE200408A4A /* CardModel.swift */; };
+		0E2A064522590AE200408A4A /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2A064322590AE200408A4A /* ProfileModel.swift */; };
+		0E2A064A22590AEE00408A4A /* DetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2A064622590AEE00408A4A /* DetailsController.swift */; };
+		0E2A064B22590AEE00408A4A /* CarouselController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2A064722590AEE00408A4A /* CarouselController.swift */; };
+		0E2A064C22590AEE00408A4A /* MainProgramController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2A064822590AEE00408A4A /* MainProgramController.swift */; };
+		0E2A064D22590AEE00408A4A /* CarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2A064922590AEE00408A4A /* CarouselCell.swift */; };
 		844DA08FB2CBD531C63D6623 /* Pods_StartPlast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7F2138421E0E07D60FC06D /* Pods_StartPlast.framework */; };
 		B7B58C382258B2D900D56198 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B58C372258B2D900D56198 /* AppDelegate.swift */; };
 		B7B58C3A2258B2D900D56198 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B58C392258B2D900D56198 /* ViewController.swift */; };
@@ -43,6 +50,13 @@
 		0E2A062B2258D2C600408A4A /* LoginStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginStoryboard.storyboard; sourceTree = "<group>"; };
 		0E2A062D2258D2F400408A4A /* CarouselStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CarouselStoryboard.storyboard; sourceTree = "<group>"; };
 		0E2A062F2258D31400408A4A /* ProfileStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileStoryboard.storyboard; sourceTree = "<group>"; };
+		0E2A064022590AD900408A4A /* RoundShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundShadowView.swift; sourceTree = "<group>"; };
+		0E2A064222590AE200408A4A /* CardModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
+		0E2A064322590AE200408A4A /* ProfileModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
+		0E2A064622590AEE00408A4A /* DetailsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsController.swift; sourceTree = "<group>"; };
+		0E2A064722590AEE00408A4A /* CarouselController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselController.swift; sourceTree = "<group>"; };
+		0E2A064822590AEE00408A4A /* MainProgramController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainProgramController.swift; sourceTree = "<group>"; };
+		0E2A064922590AEE00408A4A /* CarouselCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarouselCell.swift; path = ../CarouselCell.swift; sourceTree = "<group>"; };
 		1E7F2138421E0E07D60FC06D /* Pods_StartPlast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StartPlast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52C9A0E70D0EC8E42F457055 /* Pods-StartPlast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StartPlast.release.xcconfig"; path = "Pods/Target Support Files/Pods-StartPlast/Pods-StartPlast.release.xcconfig"; sourceTree = "<group>"; };
 		5D1C919D6D92DCAED038A180 /* Pods_StartPlastUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StartPlastUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,6 +120,7 @@
 		0E2A06272258CEB400408A4A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0E2A064E22590AF900408A4A /* Carousel Scene */,
 				BB1C9D8F2258DFD2009E597C /* LoginViewController */,
 			);
 			path = ViewControllers;
@@ -114,6 +129,8 @@
 		0E2A06282258CEBE00408A4A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0E2A064222590AE200408A4A /* CardModel.swift */,
+				0E2A064322590AE200408A4A /* ProfileModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -128,8 +145,20 @@
 		0E2A062A2258CED800408A4A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				0E2A064022590AD900408A4A /* RoundShadowView.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		0E2A064E22590AF900408A4A /* Carousel Scene */ = {
+			isa = PBXGroup;
+			children = (
+				0E2A064822590AEE00408A4A /* MainProgramController.swift */,
+				0E2A064722590AEE00408A4A /* CarouselController.swift */,
+				0E2A064622590AEE00408A4A /* DetailsController.swift */,
+				0E2A064922590AEE00408A4A /* CarouselCell.swift */,
+			);
+			path = "Carousel Scene";
 			sourceTree = "<group>";
 		};
 		15A5BFE38BB5873B80151685 /* Frameworks */ = {
@@ -404,9 +433,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E2A064A22590AEE00408A4A /* DetailsController.swift in Sources */,
 				BB1C9D912258E0C4009E597C /* LoginViewController.swift in Sources */,
+				0E2A064122590AD900408A4A /* RoundShadowView.swift in Sources */,
 				B7B58C3A2258B2D900D56198 /* ViewController.swift in Sources */,
+				0E2A064522590AE200408A4A /* ProfileModel.swift in Sources */,
+				0E2A064B22590AEE00408A4A /* CarouselController.swift in Sources */,
+				0E2A064C22590AEE00408A4A /* MainProgramController.swift in Sources */,
 				B7B58C382258B2D900D56198 /* AppDelegate.swift in Sources */,
+				0E2A064422590AE200408A4A /* CardModel.swift in Sources */,
+				0E2A064D22590AEE00408A4A /* CarouselCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
