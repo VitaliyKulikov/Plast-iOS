@@ -19,7 +19,6 @@
 		0E2A064D22590AEE00408A4A /* CarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2A064922590AEE00408A4A /* CarouselCell.swift */; };
 		0E2A06552259221300408A4A /* CardsDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2A06542259221300408A4A /* CardsDataService.swift */; };
 		0E2A0657225932E400408A4A /* ProfileDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2A0656225932E400408A4A /* ProfileDataService.swift */; };
-		0E2A06612259F3DD00408A4A /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 0E2A06602259F3DD00408A4A /* data.json */; };
 		0E2A06632259FF6400408A4A /* ShareProgressCardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2A06622259FF6400408A4A /* ShareProgressCardController.swift */; };
 		0E2A0665225A006000408A4A /* UIView+ToImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2A0664225A006000408A4A /* UIView+ToImage.swift */; };
 		0E2A0667225A009900408A4A /* ShareService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2A0666225A009900408A4A /* ShareService.swift */; };
@@ -69,7 +68,6 @@
 		0E2A064922590AEE00408A4A /* CarouselCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarouselCell.swift; path = ../CarouselCell.swift; sourceTree = "<group>"; };
 		0E2A06542259221300408A4A /* CardsDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsDataService.swift; sourceTree = "<group>"; };
 		0E2A0656225932E400408A4A /* ProfileDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataService.swift; sourceTree = "<group>"; };
-		0E2A06602259F3DD00408A4A /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		0E2A06622259FF6400408A4A /* ShareProgressCardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareProgressCardController.swift; sourceTree = "<group>"; };
 		0E2A0664225A006000408A4A /* UIView+ToImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ToImage.swift"; sourceTree = "<group>"; };
 		0E2A0666225A009900408A4A /* ShareService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareService.swift; sourceTree = "<group>"; };
@@ -437,7 +435,6 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -448,7 +445,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
