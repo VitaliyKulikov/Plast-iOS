@@ -81,6 +81,7 @@ extension LoginViewController: GIDSignInDelegate {
                         }
                     })
                 case .success(let profile):
+                    MBProgressHUD.hideAnimated(forView: self?.view)
                     self?.finishSingIn(with: profile)
                 }
             })

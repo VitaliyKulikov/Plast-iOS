@@ -9,6 +9,8 @@
 import UIKit
 import Kingfisher
 import MessageUI
+import FirebaseAuth
+import GoogleSignIn
 
 class ProfileController: UITableViewController {
 
@@ -70,8 +72,16 @@ class ProfileController: UITableViewController {
             }
             sendEmail()
         case 2:
-            // TODO: logout
-            print("Logout")
+            if let nav = presentingViewController as? UINavigationController {
+                GIDSignIn.sharedInstance()?.signOut()
+                do {
+                    try Auth.auth().signOut()
+                } catch {
+                    print(error)
+                }
+                nav.popToRootViewController(animated: false)
+                dismiss(animated: true, completion: nil)
+            }
         default:
             break
         }
