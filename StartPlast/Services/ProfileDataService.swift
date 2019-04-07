@@ -11,6 +11,7 @@ import Firebase
 import FirebaseDatabase
 
 class ProfileDataService {
+    
     enum DBError: Swift.Error {
         case profileIsMissing
         case writeError
@@ -64,6 +65,7 @@ class ProfileDataService {
             self?.getCurrentProfile(completion: { (result) in
                 completion(result)
             })
+            self?.postCardCompleteNotification()
         }
         
         // TODO:
@@ -88,15 +90,6 @@ class ProfileDataService {
             completion(.success(profile))
             
         })
-        
-        // FIXME:
-        completion(.success(ProfileModel(
-            id: "123",
-            username: "Kristina Del Rio Albrechet",
-            email: "kalbrechet@gmail.com",
-            avatarUrl: URL(string: "https://cdn-images-1.medium.com/fit/c/200/200/1*8EAtAFUVRiK1btuFhLnE1Q@2x.jpeg")!,
-            currentStep: 2,
-            coins: 0)))
     }
     
     func getProfile(with profileId: String, completion: @escaping (Result<ProfileModel>) ->Void) {
@@ -131,4 +124,12 @@ class ProfileDataService {
     }
     
     //MARK: Private methods
+    
+    private func postCardCompleteNotification() {
+        NotificationCenter.default.post(name: Notification.Name.cardCompleted, object: nil)
+    }
+}
+
+extension Notification.Name {
+    static let cardCompleted = NSNotification.Name("URLContainerDidAddURL")
 }
