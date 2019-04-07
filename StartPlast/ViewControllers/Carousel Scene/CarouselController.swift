@@ -21,6 +21,8 @@ class CarouselController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateContent()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(handleCardCompletedNotification), name: .cardCompleted, object: nil)
     }
     
     private func updateContent() {
@@ -35,6 +37,12 @@ class CarouselController: UIViewController {
                         }) ?? 0, section: 0), at: .left, animated: true)
                 }
             }
+        }
+    }
+    
+    @objc private func handleCardCompletedNotification() {
+        DispatchQueue.main.async { [weak self] in
+            //self?.updateContent()
         }
     }
 }

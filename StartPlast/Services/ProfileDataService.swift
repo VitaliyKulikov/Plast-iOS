@@ -11,6 +11,7 @@ import Firebase
 import FirebaseDatabase
 
 class ProfileDataService {
+    
     enum DBError: Swift.Error {
         case profileIsMissing
         case writeError
@@ -64,6 +65,7 @@ class ProfileDataService {
             self?.getCurrentProfile(completion: { (result) in
                 completion(result)
             })
+            self?.postCardCompleteNotification()
         }
         
         // TODO:
@@ -131,4 +133,12 @@ class ProfileDataService {
     }
     
     //MARK: Private methods
+    
+    private func postCardCompleteNotification() {
+        NotificationCenter.default.post(name: Notification.Name.cardCompleted, object: nil)
+    }
+}
+
+extension Notification.Name {
+    static let cardCompleted = NSNotification.Name("URLContainerDidAddURL")
 }
