@@ -32,6 +32,7 @@
 		BB9CA6AB2259F28A0033E94A /* MBProgressHUD+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9CA6AA2259F28A0033E94A /* MBProgressHUD+Extension.swift */; };
 		BB9CA6AD2259F63B0033E94A /* UIAlertController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9CA6AC2259F63B0033E94A /* UIAlertController+Extension.swift */; };
 		BB9CA6AF2259F7BC0033E94A /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9CA6AE2259F7BC0033E94A /* UIApplication+Extension.swift */; };
+		BB9CA6B1225A01960033E94A /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = BB9CA6B0225A01950033E94A /* data.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		BB9CA6AA2259F28A0033E94A /* MBProgressHUD+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MBProgressHUD+Extension.swift"; sourceTree = "<group>"; };
 		BB9CA6AC2259F63B0033E94A /* UIAlertController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extension.swift"; sourceTree = "<group>"; };
 		BB9CA6AE2259F7BC0033E94A /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
+		BB9CA6B0225A01950033E94A /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,6 +243,7 @@
 		B7B58C652258C22200D56198 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BB9CA6B0225A01950033E94A /* data.json */,
 				B7B58C372258B2D900D56198 /* AppDelegate.swift */,
 				B7B58C3E2258B2DB00D56198 /* Assets.xcassets */,
 				BB1C9D8D2258DFB6009E597C /* GoogleService-Info.plist */,
@@ -386,6 +389,7 @@
 				B7B58C422258B2DB00D56198 /* LaunchScreen.storyboard in Resources */,
 				0E2A062E2258D2F400408A4A /* CarouselStoryboard.storyboard in Resources */,
 				B7B58C3F2258B2DB00D56198 /* Assets.xcassets in Resources */,
+				BB9CA6B1225A01960033E94A /* data.json in Resources */,
 				0E2A06302258D31400408A4A /* ProfileStoryboard.storyboard in Resources */,
 				B7B58C3D2258B2D900D56198 /* Main.storyboard in Resources */,
 				0E2A062C2258D2C600408A4A /* LoginStoryboard.storyboard in Resources */,
@@ -422,6 +426,7 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -432,6 +437,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
