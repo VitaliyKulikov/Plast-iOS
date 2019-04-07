@@ -31,9 +31,11 @@ class DetailsController: UIViewController {
     
     @IBAction func onDoneAction(_ sender: UIButton) {
         // TODO: Add hud
-        ProfileDataService.shared.incrementCurrentCardIndex() { [weak self] result in
+        ProfileDataService.shared.completeCard(cardModel) { [weak self] result in
             switch result {
-            case .success: self?.dismiss()
+            case .success(let profile):
+                ProfileDataService.shared.setCurrentProfile(profile)
+                self?.dismiss()
             case .failure(let err): self?.showAlert(with: err)
             }
         }
