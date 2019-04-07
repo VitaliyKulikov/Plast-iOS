@@ -12,7 +12,7 @@ import GoogleSignIn
 
 class LoginViewController: UIViewController, GIDSignInUIDelegate {
     
-    
+    private static let kMainProgramId = "CarouselIdentifier"
     
     @IBOutlet private weak var signInButton: GIDSignInButton!
     
@@ -21,6 +21,14 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
         
         GIDSignIn.sharedInstance().uiDelegate = self
 //        GIDSignIn.sharedInstance()?.delegate = self
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { _ in
+            ProfileDataService.shared.get() { [weak self] model in
+                self?.performSegue(withIdentifier: LoginViewController.kMainProgramId, sender: model)
+            }
+        }
     }
 }
 
@@ -93,4 +101,15 @@ enum DBKeys {
     static let currentStep = "current_step"
     static let mail = "mail"
     static let name = "name"
+}
+
+extension LoginViewController {
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == LoginViewController.kMainProgramId,
+            let controller = segue.destination as? MainProgramController,
+            let model = sender as? ProfileModel {
+            controller.profileModel = model
+        }
+    }
 }

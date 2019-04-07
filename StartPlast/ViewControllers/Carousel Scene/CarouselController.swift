@@ -24,14 +24,16 @@ class CarouselController: UIViewController {
     }
     
     private func updateContent() {
-        // FIXME: Delete hard-coded values with method from CardModelService.
-        cardModels = [
-            CardModel(id: 0, stateId: 0, iconId: 0, plastCoins: 10, title: "First card", description: "This invitation was intended for kalbrechet@gmail.com. If you were not expecting this invitation, you can ignore this email. If @VitaliyKulikov is sending you too many emails, you can block them or report abuse."),
-            CardModel(id: 1, stateId: 1, iconId: 1, plastCoins: 10, title: "First card", description: "This invitation was intended for kalbrechet@gmail.com. If you were not expecting this invitation, you can ignore this email. If @VitaliyKulikov is sending you too many emails, you can block them or report abuse."),
-            CardModel(id: 2, stateId: 2, iconId: 2, plastCoins: 10, title: "First card", description: "This invitation was intended for kalbrechet@gmail.com. If you were not expecting this invitation, you can ignore this email. If @VitaliyKulikov is sending you too many emails, you can block them or report abuse."),
-            CardModel(id: 3, stateId: 2, iconId: 2, plastCoins: 10, title: "First card", description: "This invitation was intended for kalbrechet@gmail.com. If you were not expecting this invitation, you can ignore this email. If @VitaliyKulikov is sending you too many emails, you can block them or report abuse.")
-        ]
-        collectionView.reloadData()
+        CardsDataService.shared.get() { [weak self] models in
+            DispatchQueue.main.async {
+                self?.cardModels = models
+                self?.collectionView.reloadData()
+                self?.collectionView.scrollToItem(
+                    at: IndexPath(item: self?.cardModels.firstIndex(where: {
+                    $0.state == .current
+                    }) ?? 0, section: 0), at: .left, animated: true)
+            }
+        }
     }
 }
 
@@ -58,12 +60,15 @@ extension CarouselController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView,
                         didSelectItemAt indexPath: IndexPath) {
-        onDetails?(cardModels[indexPath.row])
+    
+        if cardModels[indexPath.row].state != .locked {
+            onDetails?(cardModels[indexPath.row])
+        }
     }
 }
 
 extension CarouselController: UICollectionViewDelegateFlowLayout {
-    
+
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {

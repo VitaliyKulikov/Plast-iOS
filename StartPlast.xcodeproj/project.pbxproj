@@ -17,6 +17,8 @@
 		0E2A064B22590AEE00408A4A /* CarouselController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2A064722590AEE00408A4A /* CarouselController.swift */; };
 		0E2A064C22590AEE00408A4A /* MainProgramController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2A064822590AEE00408A4A /* MainProgramController.swift */; };
 		0E2A064D22590AEE00408A4A /* CarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2A064922590AEE00408A4A /* CarouselCell.swift */; };
+		0E2A06552259221300408A4A /* CardsDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2A06542259221300408A4A /* CardsDataService.swift */; };
+		0E2A0657225932E400408A4A /* ProfileDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2A0656225932E400408A4A /* ProfileDataService.swift */; };
 		844DA08FB2CBD531C63D6623 /* Pods_StartPlast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7F2138421E0E07D60FC06D /* Pods_StartPlast.framework */; };
 		B7B58C382258B2D900D56198 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B58C372258B2D900D56198 /* AppDelegate.swift */; };
 		B7B58C3A2258B2D900D56198 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B58C392258B2D900D56198 /* ViewController.swift */; };
@@ -57,6 +59,8 @@
 		0E2A064722590AEE00408A4A /* CarouselController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselController.swift; sourceTree = "<group>"; };
 		0E2A064822590AEE00408A4A /* MainProgramController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainProgramController.swift; sourceTree = "<group>"; };
 		0E2A064922590AEE00408A4A /* CarouselCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarouselCell.swift; path = ../CarouselCell.swift; sourceTree = "<group>"; };
+		0E2A06542259221300408A4A /* CardsDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsDataService.swift; sourceTree = "<group>"; };
+		0E2A0656225932E400408A4A /* ProfileDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataService.swift; sourceTree = "<group>"; };
 		1E7F2138421E0E07D60FC06D /* Pods_StartPlast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StartPlast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52C9A0E70D0EC8E42F457055 /* Pods-StartPlast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StartPlast.release.xcconfig"; path = "Pods/Target Support Files/Pods-StartPlast/Pods-StartPlast.release.xcconfig"; sourceTree = "<group>"; };
 		5D1C919D6D92DCAED038A180 /* Pods_StartPlastUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StartPlastUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,6 +142,8 @@
 		0E2A06292258CEC600408A4A /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				0E2A06542259221300408A4A /* CardsDataService.swift */,
+				0E2A0656225932E400408A4A /* ProfileDataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -461,6 +467,7 @@
 				0E2A064A22590AEE00408A4A /* DetailsController.swift in Sources */,
 				BB1C9D912258E0C4009E597C /* LoginViewController.swift in Sources */,
 				0E2A064122590AD900408A4A /* RoundShadowView.swift in Sources */,
+				0E2A0657225932E400408A4A /* ProfileDataService.swift in Sources */,
 				B7B58C3A2258B2D900D56198 /* ViewController.swift in Sources */,
 				0E2A064522590AE200408A4A /* ProfileModel.swift in Sources */,
 				0E2A064B22590AEE00408A4A /* CarouselController.swift in Sources */,
@@ -468,6 +475,7 @@
 				B7B58C382258B2D900D56198 /* AppDelegate.swift in Sources */,
 				0E2A064422590AE200408A4A /* CardModel.swift in Sources */,
 				0E2A064D22590AEE00408A4A /* CarouselCell.swift in Sources */,
+				0E2A06552259221300408A4A /* CardsDataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

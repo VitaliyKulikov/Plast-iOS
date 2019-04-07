@@ -12,18 +12,17 @@ struct CardModel: Codable {
     
     enum State: Int {
         case locked = 1
-        case unlocked
+        case current
         case done
     }
     
-    let id: Int
+    let index: Int
     let stateId: Int
-    let iconId: Int
     let plastCoins: Int
     let title: String
     let description: String
     
     var state: State {
-        return State(rawValue: stateId) ?? .unlocked
+        return State(rawValue: stateId) ?? .current
     }
 }

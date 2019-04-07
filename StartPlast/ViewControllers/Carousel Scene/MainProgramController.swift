@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class MainProgramController: UIViewController {
     
@@ -22,14 +23,13 @@ class MainProgramController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // FIXME: Remove it after getting real data.
-        profileModel = ProfileModel(username: "Kristina Del Rio Albrechet", email: "kalbrechet@gmail.com", avatarUrl: URL(string: "http://booking.uz.gov.ua")!, coins: 0)
         configureUI()
     }
     
     private func configureUI() {
-        usernameLabel.layer.cornerRadius = usernameLabel.bounds.width / 2
-        profileImageView.image = UIImage(contentsOfFile: "")
+        profileImageView.layer.cornerRadius = profileImageView.bounds.width / 2
+        profileImageView.image = UIImage(named: "avatar-default")
+        profileImageView.kf.setImage(with: profileModel.avatarUrl)
         usernameLabel.text = profileModel.username
     }
     

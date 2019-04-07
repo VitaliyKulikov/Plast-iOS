@@ -11,7 +11,7 @@ import UIKit
 class RoundShadowView: UIView {
     
     private var shadowLayer: CAShapeLayer!
-    private var cornerRadius: CGFloat = 14
+    internal var cornerRadius: CGFloat = 14
     private var fillColor: UIColor = .white
     
     override func layoutSubviews() {
