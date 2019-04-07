@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 class DetailsController: UIViewController {
     
@@ -30,8 +31,9 @@ class DetailsController: UIViewController {
     }
     
     @IBAction func onDoneAction(_ sender: UIButton) {
-        // TODO: Add hud
+        MBProgressHUD.showAnimated(onView: self.view)
         ProfileDataService.shared.completeCard(cardModel) { [weak self] result in
+            MBProgressHUD.hideAnimated(forView: self?.view)
             switch result {
             case .success(let profile):
                 ProfileDataService.shared.setCurrentProfile(profile)

@@ -42,7 +42,7 @@ class CarouselController: UIViewController {
     
     @objc private func handleCardCompletedNotification() {
         DispatchQueue.main.async { [weak self] in
-            //self?.updateContent()
+            self?.updateContent()
         }
     }
 }
