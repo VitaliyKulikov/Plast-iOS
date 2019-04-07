@@ -28,7 +28,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Profile" translatesAutoresizingMaskIntoConstraints="NO" id="rAL-j8-2XO">
-                                                    <rect key="frame" x="0.0" y="220.99999999999997" width="375" height="250.00000000000009"/>
+                                                    <rect key="frame" x="0.0" y="221" width="375" height="250"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="250" id="BAR-Vi-hvd"/>
                                                     </constraints>
