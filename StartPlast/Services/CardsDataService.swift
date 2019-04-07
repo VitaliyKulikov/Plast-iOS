@@ -13,23 +13,25 @@ class CardsDataService {
     static var shared = CardsDataService()
     
     func get(completion: (([CardModel]) -> Void)? = nil) {
-        if let path = Bundle.main.path(forResource: "data", ofType: "json") {
-            do {
-                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-                let json = try JSON(data: data)
-                
-                if let cardJsons = json["cards"].arrayObject {
-                    let cards = cardJsons.map ({CardModel(json: $0 as! [String: AnyObject])})
-                    updateStates(for: cards, completion: completion)
-                } else {
+        DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+            if let path = Bundle.main.path(forResource: "data", ofType: "json") {
+                do {
+                    let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                    let json = try JSON(data: data)
+                    
+                    if let cardJsons = json["cards"].arrayObject {
+                        let cards = cardJsons.map ({CardModel(json: $0 as! [String: AnyObject])})
+                        self?.updateStates(for: cards, completion: completion)
+                    } else {
+                        completion?([])
+                    }
+                } catch let err {
+                    print(err.localizedDescription)
                     completion?([])
                 }
-            } catch let err {
-                print(err.localizedDescription)
-                completion?([])
             }
+            completion?([])
         }
-        completion?([])
     }
     
     private func updateStates(for cards: [CardModel],
