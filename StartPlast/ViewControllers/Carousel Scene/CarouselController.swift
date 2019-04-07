@@ -28,10 +28,10 @@ class CarouselController: UIViewController {
             DispatchQueue.main.async {
                 self?.cardModels = models
                 self?.collectionView.reloadData()
-                self?.collectionView.scrollToItem(
-                    at: IndexPath(item: self?.cardModels.firstIndex(where: {
-                    $0.state == .current
-                    }) ?? 0, section: 0), at: .left, animated: true)
+//                self?.collectionView.scrollToItem(
+//                    at: IndexPath(item: self?.cardModels.firstIndex(where: {
+//                    $0.state == .current
+//                    }) ?? 0, section: 0), at: .left, animated: true)
             }
         }
     }

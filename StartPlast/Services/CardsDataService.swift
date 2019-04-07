@@ -7,16 +7,53 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 class CardsDataService {
     static var shared = CardsDataService()
     
     func get(completion: (([CardModel]) -> Void)? = nil) {
-        completion?([
-            CardModel(index: 0, stateId: 3, plastCoins: 10, title: "First card", description: "This invitation was intended for kalbrechet@gmail.com. If you were not expecting this invitation, you can ignore this email. If @VitaliyKulikov is sending you too many emails, you can block them or report abuse."),
-            CardModel(index: 1, stateId: 2, plastCoins: 10, title: "First card", description: "This invitation was intended for kalbrechet@gmail.com. If you were not expecting this invitation, you can ignore this email. If @VitaliyKulikov is sending you too many emails, you can block them or report abuse."),
-            CardModel(index: 2, stateId: 1, plastCoins: 10, title: "First card", description: "This invitation was intended for kalbrechet@gmail.com. If you were not expecting this invitation, you can ignore this email. If @VitaliyKulikov is sending you too many emails, you can block them or report abuse."),
-            CardModel(index: 3, stateId: 1, plastCoins: 10, title: "First card", description: "This invitation was intended for kalbrechet@gmail.com. If you were not expecting this invitation, you can ignore this email. If @VitaliyKulikov is sending you too many emails, you can block them or report abuse.")
-            ])
+        if let path = Bundle.main.path(forResource: "data", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                let json = try JSON(data: data)
+                
+                if let cardJsons = json["cards"].arrayObject {
+                    let cards = cardJsons.map ({CardModel(json: $0 as! [String: AnyObject])})
+                    updateStates(for: cards, completion: completion)
+                } else {
+                    completion?([])
+                }
+            } catch let err {
+                print(err.localizedDescription)
+                completion?([])
+            }
+        }
+        completion?([])
+    }
+    
+    private func updateStates(for cards: [CardModel],
+                              completion: (([CardModel]) -> Void)? = nil) {
+        
+        ProfileDataService.shared.getCurrentProfile { (result) in
+            switch result {
+            case .failure(let err):
+                print(err.localizedDescription)
+                completion?([])
+                
+            case .success(let model):
+                completion?(cards.map{
+                    var card = $0
+                    if model.currentStep ==  $0.index {
+                        card.state = .current
+                    } else if model.currentStep > $0.index {
+                        card.state = .done
+                    } else {
+                        card.state = .locked
+                    }
+                    return card
+                })
+            }
+        }
     }
 }
