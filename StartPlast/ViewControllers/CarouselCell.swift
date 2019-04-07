@@ -25,6 +25,7 @@ class CarouselCell: UICollectionViewCell {
     @IBOutlet weak var inactiveView: UIView!
     
     private static let kCardCornerRadius: CGFloat = 14
+    var  onShare: (() -> Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -36,6 +37,7 @@ class CarouselCell: UICollectionViewCell {
     
     func configure(with model: CardModel) {
         coinsLabel.text = "+ \(model.plastCoins) пласткоїнів"
+        taskIdentifierLabel.text = "Завдання \(model.index + 1)"
         generalImageView.image = UIImage(named: "card-\(model.index)")
         cardTitleLabel.text = model.title
         cardDescriptionLabel.text = model.description
@@ -43,7 +45,8 @@ class CarouselCell: UICollectionViewCell {
         cardIdButton.backgroundColor = model.state == .locked ? #colorLiteral(red: 0.6980392157, green: 0.6980392157, blue: 0.6980392157, alpha: 1) : #colorLiteral(red: 0.3411764706, green: 0.7215686275, blue: 0.5803921569, alpha: 1)
         cardIdButton.setTitle(model.state == .done ? "✔︎" : "\(model.index + 1)", for: .normal)
         inactiveView.alpha = model.state == .locked ? 1 : 0
-        detailsButton.setTitle(model.state == .done ? "Деталі" : "Розпочати", for: .normal)
+        detailsButton.setTitle(model.state == .done ? "Поширити" : "Розпочати", for: .normal)
+        detailsButton.isUserInteractionEnabled = model.state == .done
         
         switch model.state {
         case .locked: lockImageView.image = UIImage(named: "locked")
@@ -64,5 +67,9 @@ class CarouselCell: UICollectionViewCell {
         inactiveView.alpha = 1
         detailsButton.setTitle("Розпочати", for: .normal)
         lockImageView.image = UIImage(named: "locked")
+    }
+    
+    @IBAction func onDetailsButton(_ sender: UIButton) {
+        onShare?()
     }
 }

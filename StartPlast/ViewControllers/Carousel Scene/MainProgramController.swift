@@ -20,10 +20,13 @@ class MainProgramController: UIViewController {
     @IBOutlet weak var profileImageView: UIImageView!
     
     var profileModel: ProfileModel!
+    var shareService: ShareService!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        shareService = ShareService()
+        shareService.delegate = self
     }
     
     private func configureUI() {
@@ -42,6 +45,9 @@ class MainProgramController: UIViewController {
             let controller = segue.destination as? CarouselController {
             controller.onDetails = { [weak self] model in
                 self?.performSegue(withIdentifier: MainProgramController.kDetailsId, sender: model)
+            }
+            controller.onShare = { [weak self] cardModel, count in
+                self?.shareService.share(cardModel: cardModel, numberOfCards: count)
             }
         }
     }

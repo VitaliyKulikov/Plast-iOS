@@ -17,6 +17,7 @@ class CarouselController: UIViewController {
     
     var onDetails: ((CardModel) -> Void)?
     var cardModels = [CardModel]()
+    var onShare: ((CardModel, Int) -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +50,10 @@ extension CarouselController: UICollectionViewDataSource {
                 fatalError("Cannot find cell with identifier.")
         }
         cell.configure(with: cardModels[indexPath.row])
+        cell.onShare = { [weak self] in
+            guard let this = self  else { return }
+            this.onShare?(this.cardModels[indexPath.row], this.cardModels.count)
+        }
         return cell
     }
     
