@@ -9,7 +9,7 @@ target 'StartPlast' do
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
   pod 'GoogleSignIn'
-  pod 'SwiftyJSON', '~> 4.2.0'
+  pod 'SwiftyJSON', '~> 4.3'
   pod 'Kingfisher', '~> 5.0'
   pod 'MBProgressHUD'
 

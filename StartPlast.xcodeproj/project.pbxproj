@@ -22,6 +22,8 @@
 		0E2A06632259FF6400408A4A /* ShareProgressCardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2A06622259FF6400408A4A /* ShareProgressCardController.swift */; };
 		0E2A0665225A006000408A4A /* UIView+ToImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2A0664225A006000408A4A /* UIView+ToImage.swift */; };
 		0E2A0667225A009900408A4A /* ShareService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2A0666225A009900408A4A /* ShareService.swift */; };
+		0E986D8F225A17BC00B85478 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E986D8E225A17BC00B85478 /* ProfileController.swift */; };
+		0E986D92225A1BFD00B85478 /* StepCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E986D91225A1BFD00B85478 /* StepCell.swift */; };
 		844DA08FB2CBD531C63D6623 /* Pods_StartPlast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7F2138421E0E07D60FC06D /* Pods_StartPlast.framework */; };
 		B7B58C382258B2D900D56198 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B58C372258B2D900D56198 /* AppDelegate.swift */; };
 		B7B58C3A2258B2D900D56198 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B58C392258B2D900D56198 /* ViewController.swift */; };
@@ -71,6 +73,8 @@
 		0E2A06622259FF6400408A4A /* ShareProgressCardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareProgressCardController.swift; sourceTree = "<group>"; };
 		0E2A0664225A006000408A4A /* UIView+ToImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ToImage.swift"; sourceTree = "<group>"; };
 		0E2A0666225A009900408A4A /* ShareService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareService.swift; sourceTree = "<group>"; };
+		0E986D8E225A17BC00B85478 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		0E986D91225A1BFD00B85478 /* StepCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepCell.swift; sourceTree = "<group>"; };
 		1E7F2138421E0E07D60FC06D /* Pods_StartPlast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StartPlast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52C9A0E70D0EC8E42F457055 /* Pods-StartPlast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StartPlast.release.xcconfig"; path = "Pods/Target Support Files/Pods-StartPlast/Pods-StartPlast.release.xcconfig"; sourceTree = "<group>"; };
 		5D1C919D6D92DCAED038A180 /* Pods_StartPlastUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StartPlastUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,6 +142,7 @@
 		0E2A06272258CEB400408A4A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0E986D90225A1BE500B85478 /* Profile */,
 				0E2A064E22590AF900408A4A /* Carousel Scene */,
 				BB1C9D8F2258DFD2009E597C /* LoginViewController */,
 			);
@@ -183,6 +188,15 @@
 				0E2A06622259FF6400408A4A /* ShareProgressCardController.swift */,
 			);
 			path = "Carousel Scene";
+			sourceTree = "<group>";
+		};
+		0E986D90225A1BE500B85478 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				0E986D8E225A17BC00B85478 /* ProfileController.swift */,
+				0E986D91225A1BFD00B85478 /* StepCell.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		15A5BFE38BB5873B80151685 /* Frameworks */ = {
@@ -435,6 +449,7 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -445,6 +460,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -498,12 +514,14 @@
 			files = (
 				0E2A064A22590AEE00408A4A /* DetailsController.swift in Sources */,
 				BB9CA6AB2259F28A0033E94A /* MBProgressHUD+Extension.swift in Sources */,
+				0E986D8F225A17BC00B85478 /* ProfileController.swift in Sources */,
 				BB1C9D912258E0C4009E597C /* LoginViewController.swift in Sources */,
 				0E2A064122590AD900408A4A /* RoundShadowView.swift in Sources */,
 				BB9CA6AF2259F7BC0033E94A /* UIApplication+Extension.swift in Sources */,
 				0E2A0657225932E400408A4A /* ProfileDataService.swift in Sources */,
 				B7B58C3A2258B2D900D56198 /* ViewController.swift in Sources */,
 				0E2A0665225A006000408A4A /* UIView+ToImage.swift in Sources */,
+				0E986D92225A1BFD00B85478 /* StepCell.swift in Sources */,
 				0E2A064522590AE200408A4A /* ProfileModel.swift in Sources */,
 				0E2A064B22590AEE00408A4A /* CarouselController.swift in Sources */,
 				BB9CA6AD2259F63B0033E94A /* UIAlertController+Extension.swift in Sources */,

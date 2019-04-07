@@ -15,7 +15,7 @@ class CarouselController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var onDetails: ((CardModel) -> Void)?
+    var onDetails: ((CardModel, Int) -> Void)?
     var cardModels = [CardModel]()
     var onShare: ((CardModel, Int) -> Void)?
     
@@ -69,7 +69,7 @@ extension CarouselController: UICollectionViewDelegate {
                         didSelectItemAt indexPath: IndexPath) {
     
         if cardModels[indexPath.row].state != .locked {
-            onDetails?(cardModels[indexPath.row])
+            onDetails?(cardModels[indexPath.row], cardModels.count)
         }
     }
 }

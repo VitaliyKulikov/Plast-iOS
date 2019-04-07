@@ -13,6 +13,7 @@ class MainProgramController: UIViewController {
     
     private static let kDetailsId = "DetailsIdentifier"
     private static let kCarousel = "CarouselIdentifier"
+    private static let kProfileId = "ProfileIdentifier"
     
     @IBOutlet weak var carouselContainerView: UIView!
     @IBOutlet weak var topPanelView: UIView!
@@ -21,12 +22,20 @@ class MainProgramController: UIViewController {
     
     var profileModel: ProfileModel!
     var shareService: ShareService!
+    private var stepsCount: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
         shareService = ShareService()
         shareService.delegate = self
+        
+        topPanelView.addGestureRecognizer(UITapGestureRecognizer(
+            target: self, action: #selector(onProfileAction)))
+    }
+    
+    @objc func onProfileAction() {
+        performSegue(withIdentifier: MainProgramController.kProfileId, sender: nil)
     }
     
     private func configureUI() {
@@ -41,14 +50,18 @@ class MainProgramController: UIViewController {
             let controller = segue.destination as? DetailsController,
             let model = sender as? CardModel {
             controller.cardModel = model
+            
         } else if segue.identifier == MainProgramController.kCarousel,
             let controller = segue.destination as? CarouselController {
-            controller.onDetails = { [weak self] model in
+            controller.onDetails = { [weak self] model, count in
                 self?.performSegue(withIdentifier: MainProgramController.kDetailsId, sender: model)
             }
             controller.onShare = { [weak self] cardModel, count in
                 self?.shareService.share(cardModel: cardModel, numberOfCards: count)
             }
+        } else if segue.identifier == MainProgramController.kProfileId,
+            let controller = segue.destination as? ProfileController {
+            controller.countSteps = 12
         }
     }
 }

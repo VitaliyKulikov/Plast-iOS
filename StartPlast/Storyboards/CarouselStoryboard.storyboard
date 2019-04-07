@@ -71,7 +71,7 @@
                         <outlet property="profileImageView" destination="u1u-UV-FKD" id="TL9-3H-Qa2"/>
                         <outlet property="topPanelView" destination="VRc-do-eQ2" id="1UY-xr-j6l"/>
                         <outlet property="usernameLabel" destination="XnP-zQ-k6v" id="t7t-qW-RhT"/>
-                        <segue destination="5HT-mw-2xX" kind="show" identifier="ProfileIdentifier" id="Udo-fe-lIb"/>
+                        <segue destination="5HT-mw-2xX" kind="presentation" identifier="ProfileIdentifier" id="Udo-fe-lIb"/>
                         <segue destination="gWp-Qp-lwJ" kind="presentation" identifier="DetailsIdentifier" id="azj-29-P98"/>
                     </connections>
                 </viewController>
@@ -456,6 +456,6 @@
     <resources>
         <image name="Done" width="320" height="212"/>
         <image name="card-0" width="408" height="328"/>
-        <image name="close" width="85.333335876464844" height="85.333335876464844"/>
+        <image name="close" width="42.666667938232422" height="42.666667938232422"/>
     </resources>
 </document>
