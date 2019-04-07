@@ -20,6 +20,9 @@
 		0E2A06552259221300408A4A /* CardsDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2A06542259221300408A4A /* CardsDataService.swift */; };
 		0E2A0657225932E400408A4A /* ProfileDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2A0656225932E400408A4A /* ProfileDataService.swift */; };
 		0E2A06612259F3DD00408A4A /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 0E2A06602259F3DD00408A4A /* data.json */; };
+		0E2A06632259FF6400408A4A /* ShareProgressCardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2A06622259FF6400408A4A /* ShareProgressCardController.swift */; };
+		0E2A0665225A006000408A4A /* UIView+ToImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2A0664225A006000408A4A /* UIView+ToImage.swift */; };
+		0E2A0667225A009900408A4A /* ShareService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2A0666225A009900408A4A /* ShareService.swift */; };
 		844DA08FB2CBD531C63D6623 /* Pods_StartPlast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7F2138421E0E07D60FC06D /* Pods_StartPlast.framework */; };
 		B7B58C382258B2D900D56198 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B58C372258B2D900D56198 /* AppDelegate.swift */; };
 		B7B58C3A2258B2D900D56198 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B58C392258B2D900D56198 /* ViewController.swift */; };
@@ -63,6 +66,9 @@
 		0E2A06542259221300408A4A /* CardsDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsDataService.swift; sourceTree = "<group>"; };
 		0E2A0656225932E400408A4A /* ProfileDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataService.swift; sourceTree = "<group>"; };
 		0E2A06602259F3DD00408A4A /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		0E2A06622259FF6400408A4A /* ShareProgressCardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareProgressCardController.swift; sourceTree = "<group>"; };
+		0E2A0664225A006000408A4A /* UIView+ToImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ToImage.swift"; sourceTree = "<group>"; };
+		0E2A0666225A009900408A4A /* ShareService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareService.swift; sourceTree = "<group>"; };
 		1E7F2138421E0E07D60FC06D /* Pods_StartPlast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StartPlast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52C9A0E70D0EC8E42F457055 /* Pods-StartPlast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StartPlast.release.xcconfig"; path = "Pods/Target Support Files/Pods-StartPlast/Pods-StartPlast.release.xcconfig"; sourceTree = "<group>"; };
 		5D1C919D6D92DCAED038A180 /* Pods_StartPlastUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StartPlastUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,6 +152,7 @@
 			children = (
 				0E2A06542259221300408A4A /* CardsDataService.swift */,
 				0E2A0656225932E400408A4A /* ProfileDataService.swift */,
+				0E2A0666225A009900408A4A /* ShareService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -154,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				0E2A064022590AD900408A4A /* RoundShadowView.swift */,
+				0E2A0664225A006000408A4A /* UIView+ToImage.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -165,6 +173,7 @@
 				0E2A064722590AEE00408A4A /* CarouselController.swift */,
 				0E2A064622590AEE00408A4A /* DetailsController.swift */,
 				0E2A064922590AEE00408A4A /* CarouselCell.swift */,
+				0E2A06622259FF6400408A4A /* ShareProgressCardController.swift */,
 			);
 			path = "Carousel Scene";
 			sourceTree = "<group>";
@@ -475,10 +484,13 @@
 				0E2A064122590AD900408A4A /* RoundShadowView.swift in Sources */,
 				0E2A0657225932E400408A4A /* ProfileDataService.swift in Sources */,
 				B7B58C3A2258B2D900D56198 /* ViewController.swift in Sources */,
+				0E2A0665225A006000408A4A /* UIView+ToImage.swift in Sources */,
 				0E2A064522590AE200408A4A /* ProfileModel.swift in Sources */,
 				0E2A064B22590AEE00408A4A /* CarouselController.swift in Sources */,
 				0E2A064C22590AEE00408A4A /* MainProgramController.swift in Sources */,
 				B7B58C382258B2D900D56198 /* AppDelegate.swift in Sources */,
+				0E2A06632259FF6400408A4A /* ShareProgressCardController.swift in Sources */,
+				0E2A0667225A009900408A4A /* ShareService.swift in Sources */,
 				0E2A064422590AE200408A4A /* CardModel.swift in Sources */,
 				0E2A064D22590AEE00408A4A /* CarouselCell.swift in Sources */,
 				0E2A06552259221300408A4A /* CardsDataService.swift in Sources */,
@@ -657,7 +669,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HVKBNHWDD2;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/StartPlast/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -667,7 +679,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -678,7 +690,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HVKBNHWDD2;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/StartPlast/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -688,7 +700,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
