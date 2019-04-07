@@ -30,6 +30,8 @@
 		BB1C9D8E2258DFB6009E597C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB1C9D8D2258DFB6009E597C /* GoogleService-Info.plist */; };
 		BB1C9D912258E0C4009E597C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1C9D902258E0C4009E597C /* LoginViewController.swift */; };
 		BB9CA6AB2259F28A0033E94A /* MBProgressHUD+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9CA6AA2259F28A0033E94A /* MBProgressHUD+Extension.swift */; };
+		BB9CA6AD2259F63B0033E94A /* UIAlertController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9CA6AC2259F63B0033E94A /* UIAlertController+Extension.swift */; };
+		BB9CA6AF2259F7BC0033E94A /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9CA6AE2259F7BC0033E94A /* UIApplication+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,8 @@
 		BB1C9D8D2258DFB6009E597C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BB1C9D902258E0C4009E597C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BB9CA6AA2259F28A0033E94A /* MBProgressHUD+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MBProgressHUD+Extension.swift"; sourceTree = "<group>"; };
+		BB9CA6AC2259F63B0033E94A /* UIAlertController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extension.swift"; sourceTree = "<group>"; };
+		BB9CA6AE2259F7BC0033E94A /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,6 +261,8 @@
 			isa = PBXGroup;
 			children = (
 				BB9CA6AA2259F28A0033E94A /* MBProgressHUD+Extension.swift */,
+				BB9CA6AC2259F63B0033E94A /* UIAlertController+Extension.swift */,
+				BB9CA6AE2259F7BC0033E94A /* UIApplication+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -481,10 +487,12 @@
 				BB9CA6AB2259F28A0033E94A /* MBProgressHUD+Extension.swift in Sources */,
 				BB1C9D912258E0C4009E597C /* LoginViewController.swift in Sources */,
 				0E2A064122590AD900408A4A /* RoundShadowView.swift in Sources */,
+				BB9CA6AF2259F7BC0033E94A /* UIApplication+Extension.swift in Sources */,
 				0E2A0657225932E400408A4A /* ProfileDataService.swift in Sources */,
 				B7B58C3A2258B2D900D56198 /* ViewController.swift in Sources */,
 				0E2A064522590AE200408A4A /* ProfileModel.swift in Sources */,
 				0E2A064B22590AEE00408A4A /* CarouselController.swift in Sources */,
+				BB9CA6AD2259F63B0033E94A /* UIAlertController+Extension.swift in Sources */,
 				0E2A064C22590AEE00408A4A /* MainProgramController.swift in Sources */,
 				B7B58C382258B2D900D56198 /* AppDelegate.swift in Sources */,
 				0E2A064422590AE200408A4A /* CardModel.swift in Sources */,

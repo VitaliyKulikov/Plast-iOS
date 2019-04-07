@@ -29,8 +29,12 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
 }
 
 extension LoginViewController: GIDSignInDelegate {
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+    func sign(_ signIn: GIDSignIn, didSignInFor user: GIDGoogleUser, withError error: Error) {
         
+        guard error == nil else {
+            print(error.localizedDescription)
+            return
+        }
         
         guard let authentication = user.authentication else { return }
         let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
