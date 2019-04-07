@@ -11,20 +11,25 @@ import Firebase
 import GoogleSignIn
 import MBProgressHUD
 
-class LoginViewController: UIViewController, GIDSignInUIDelegate {
+class LoginViewController: UIViewController,  GIDSignInUIDelegate {
     
     private static let kMainProgramId = "CarouselIdentifier"
     
-    @IBOutlet private weak var signInButton: GIDSignInButton!
+    @IBOutlet private weak var signInControl: UIControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         GIDSignIn.sharedInstance().uiDelegate = self
         GIDSignIn.sharedInstance()?.delegate = self
     }
     
     override func viewDidAppear(_ animated: Bool) {
+    }
+    
+    @IBAction private func sinInPressed(_ sender: UIControl) {
+        GIDSignIn.sharedInstance()?.signIn()
     }
 }
 
