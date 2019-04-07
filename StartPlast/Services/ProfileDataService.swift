@@ -54,9 +54,12 @@ class ProfileDataService {
             return
         }
         
-        let currentStep = currentProfile.currentStep + 1
+        let newCurrentStep = currentProfile.currentStep + 1
+        let newCoins = currentProfile.coins + card.plastCoins
         
-        dbReference.child(DBKeys.users).child("\(currentProfile.id)").child(DBKeys.currentStep).setValue(currentStep) { [weak self] (error, dbRecordReference) in
+        let updatedProfile = currentProfile.updatedProfile(newCurrentStep: newCurrentStep, newCoins: newCoins)
+        
+        dbReference.child(DBKeys.users).child("\(currentProfile.id)").setValue(updatedProfile.parametersDictionary()) { [weak self] (error, dbRecordReference) in
             guard error == nil else {
                 completion(.failure(DBError.writeError))
                 return
