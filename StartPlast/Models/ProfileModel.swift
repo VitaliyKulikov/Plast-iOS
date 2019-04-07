@@ -14,10 +14,15 @@ struct ProfileModel {
     let email: String
     let avatarUrl: URL
     private(set) var currentStep: Int
-    let coins: Int 
+    private(set) var coins: Int
 }
 
 extension ProfileModel {
+    func updatedProfile(newCurrentStep: Int, newCoins: Int) -> ProfileModel {
+        let profile = ProfileModel.init(id: self.id, username: self.username, email: self.email, avatarUrl: avatarUrl, currentStep: newCurrentStep, coins: newCoins)
+        return profile
+    }
+    
     func parametersDictionary() -> [String: Any] {
         
         return [ProfileDataService.DBKeys.name: username,
