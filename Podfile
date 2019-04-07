@@ -10,5 +10,6 @@ target 'StartPlast' do
   pod 'Firebase/Database'
   pod 'GoogleSignIn'
   pod 'Kingfisher', '~> 5.0'
+  pod 'MBProgressHUD'
 
 end

@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import GoogleSignIn
+import MBProgressHUD
 
 class LoginViewController: UIViewController, GIDSignInUIDelegate {
     
@@ -30,15 +31,19 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
 extension LoginViewController: GIDSignInDelegate {
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         
+        
         guard let authentication = user.authentication else { return }
         let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
                                                        accessToken: authentication.accessToken)
+        
+        MBProgressHUD.showAnimated(onView: self.view)
         Auth.auth().signInAndRetrieveData(with: credential) {[weak self] (authResult, error) in
             if let error = error {
-                // ...
+                MBProgressHUD.hideAnimated(forView: self?.view)
                 return
             }
             guard let user = authResult?.user else {
+                MBProgressHUD.hideAnimated(forView: self?.view)
                 return
             }
             let userId = user.uid
@@ -46,6 +51,7 @@ extension LoginViewController: GIDSignInDelegate {
             ProfileDataService.shared.getProfile(with: userId, completion: { (result) in
                 switch result {
                 case .failure(let error):
+                    MBProgressHUD.hideAnimated(forView: self?.view)
                     print(error)
                     
                     guard let email = user.email,
@@ -55,7 +61,9 @@ extension LoginViewController: GIDSignInDelegate {
                     }
                     
                     let profileModelToRegister = ProfileModel.init(id: userId, username: name, email: email, avatarUrl: avatarURL, currentStep: 0, coins: 0)
+                    MBProgressHUD.showAnimated(onView: self?.view)
                     ProfileDataService.shared.registerUser(with: profileModelToRegister, completion: { (result) in
+                        MBProgressHUD.hideAnimated(forView: self?.view)
                         switch result {
                         case .failure(let error):
                             fatalError()

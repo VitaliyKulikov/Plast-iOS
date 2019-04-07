@@ -29,6 +29,7 @@
 		B7B58C582258B2DB00D56198 /* StartPlastUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B58C572258B2DB00D56198 /* StartPlastUITests.swift */; };
 		BB1C9D8E2258DFB6009E597C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB1C9D8D2258DFB6009E597C /* GoogleService-Info.plist */; };
 		BB1C9D912258E0C4009E597C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1C9D902258E0C4009E597C /* LoginViewController.swift */; };
+		BB9CA6AB2259F28A0033E94A /* MBProgressHUD+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9CA6AA2259F28A0033E94A /* MBProgressHUD+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		B95E8CB68B880C1E8797C1DA /* Pods-StartPlast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StartPlast.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StartPlast/Pods-StartPlast.debug.xcconfig"; sourceTree = "<group>"; };
 		BB1C9D8D2258DFB6009E597C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BB1C9D902258E0C4009E597C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BB9CA6AA2259F28A0033E94A /* MBProgressHUD+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MBProgressHUD+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 		0E2A062A2258CED800408A4A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				BB9CA6A92259F1220033E94A /* Extensions */,
 				0E2A064022590AD900408A4A /* RoundShadowView.swift */,
 			);
 			path = Common;
@@ -248,6 +251,14 @@
 				BB1C9D902258E0C4009E597C /* LoginViewController.swift */,
 			);
 			path = LoginViewController;
+			sourceTree = "<group>";
+		};
+		BB9CA6A92259F1220033E94A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BB9CA6AA2259F28A0033E94A /* MBProgressHUD+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		DF0CE663D1BEE57108C8B862 /* Pods */ = {
@@ -404,6 +415,7 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -413,6 +425,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -465,6 +478,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E2A064A22590AEE00408A4A /* DetailsController.swift in Sources */,
+				BB9CA6AB2259F28A0033E94A /* MBProgressHUD+Extension.swift in Sources */,
 				BB1C9D912258E0C4009E597C /* LoginViewController.swift in Sources */,
 				0E2A064122590AD900408A4A /* RoundShadowView.swift in Sources */,
 				0E2A0657225932E400408A4A /* ProfileDataService.swift in Sources */,
